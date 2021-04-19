@@ -41,7 +41,7 @@ class TextBlockRenderer: NSObject, BaseCardElementRendererProtocol {
         if attributedString.string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             // Hide accessibility Element
         }
-        
+        textView.setContentCompressionResistancePriority(NSLayoutConstraint.Priority(1000), for: .horizontal)
         return textView
     }
 }
