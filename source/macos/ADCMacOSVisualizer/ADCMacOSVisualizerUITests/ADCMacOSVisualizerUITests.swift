@@ -1,13 +1,17 @@
-//
-//  ADCMacOSVisualizerUITests.swift
-//  ADCMacOSVisualizerUITests
-//
-//  Created by aksc on 13/01/21.
-//
-
 import XCTest
 
 class ADCMacOSVisualizerUITests: XCTestCase {
+    // swiftlint:disable implicitly_unwrapped_optional
+    var app: XCUIApplication! = nil
+    
+    override func setUp() {
+        super.setUp()
+        // In UI tests it is usually best to stop immediately when a failure occurs.
+        print("Running end2end ui test")
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launch()
+    }
 //    override func setUpWithError() throws {
 //        // Put setup code here. This method is called before the invocation of each test method in the class.
 //
